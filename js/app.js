@@ -6,7 +6,7 @@ var $select = $( '<select></select>' );
 $( '#menu' ).append( $select );
 
 // Cycle over menu links
-$( '#menu a' ).each(function() {
+$( '#menu a' ).each( function() {
 	var $anchor = $( this );
 	var $option = $( '<option></option>' );
 
@@ -19,7 +19,13 @@ $( '#menu a' ).each(function() {
 });
 	
 // create button to click to go to select's location
+var $button = $( '<button>Go</button>' );
+$( '#menu' ).append( $button );
 // Bind Click to button
+$button.click( function() {
 	// Go to select's location
+	window.location = $select.val();
+});
+	
 // Modify CSS to hide links on small width and show button and select
 	// also hides select and button on larger width and show's links
