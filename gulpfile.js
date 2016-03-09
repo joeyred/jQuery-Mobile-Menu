@@ -8,9 +8,13 @@ gulp.task( 'server', function() {
 });
 
 gulp.task( 'watch', function() {
-	gulp.watch('css/*.css');
+	gulp.watch('css/*.css', function() {
+		gulp.src('css/*.css')
+		.pipe(browserSync.stream());
+	});
 	gulp.watch('js/*.js').on('change', browserSync.reload);
 	gulp.watch('*.html').on('change', browserSync.reload);
+
 });
 
 gulp.task( 'default', function() {
