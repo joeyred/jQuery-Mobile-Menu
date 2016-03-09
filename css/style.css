@@ -63,3 +63,17 @@ p {
 	text-align: center;
 	color: #777;
 }
+
+/* Hide original menu on small screens */
+@media ( min-width: 320px ) and (max-width: 568px ) {
+	#menu ul {
+		display: none;
+	}
+}
+
+/* Hide jQuery inserted mobile menu on large screens */
+@media ( min-width: 568px ) {
+	#menu select, #menu button {
+		display: none;
+	}
+}
