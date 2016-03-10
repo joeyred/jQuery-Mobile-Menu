@@ -46,14 +46,12 @@ select {
 	float: left;
 }
 
-button {
-	display: inline-block;
-	line-height: 18px;
-	padding: 0 5px;
-	margin: 11px 2% 11px 0;
-	float: right;
-	width: 10%;
+#menu select {
+	display: block;
+	width: 96%;
+	margin: 20px 4%;
 }
+
 h1 {
 	margin: 40px 0 10px;
 	text-align: center;
